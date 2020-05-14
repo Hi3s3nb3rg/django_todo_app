@@ -1,0 +1,12 @@
+{% extends 'todo/main.htm' %}
+{% block content %}
+{% load static %}
+   <div class="center-column">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        
+        <input class="btn btn-info" type="submit">
+    </form>
+   </div>
+{% endblock %}
